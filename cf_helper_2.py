@@ -34,7 +34,7 @@ def getDenseDataFromSparseMatrix(R_sparse, like = 1, dislike = -1, not_rated = 0
     return I,R, R_rated_indexes, mu 
 
 def rmse(R, R_estimated):
-	# No es conmutativa! Primero va ground truth, normalmente R_test
+    # No es conmutativa! Primero va ground truth, normalmente R_test
     nonzeros = R.nonzero()
     prediction = R_estimated[nonzeros].flatten()
     ground_truth = R[nonzeros].flatten()
